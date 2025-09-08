@@ -14,7 +14,7 @@ DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
 DB_NAME = os.getenv("DB_NAME")
 
-WHATSAPP_API_URL = "http://localhost:3000/send-message"
+WHATSAPP_API_URL = "http://54.234.28.68:3000/send-message"
 EMAIL_API_URL = "http://localhost:8000/sendEmail"
 
 genai.configure(api_key=os.getenv("GOOGLE_GEMINI_API_KEY"))
