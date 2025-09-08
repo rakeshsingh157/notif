@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  server:
+    build: ./docker_server
+    container_name: docker_server
+    restart: unless-stopped
+    environment:
+      - DB_HOST=photostore.ct0go6um6tj0.ap-south-1.rds.amazonaws.com
+      - DB_USER=admin
+      - DB_PASSWORD=DBpicshot
+      - DB_NAME=eventsreminder
+      - GOOGLE_GEMINI_API_KEY=yAIzaSyCjvLZnxPZ0TMB5fBADmdh4bBcQoSJEmy4
+
+    depends_on:
+      - email_api
+
+  email_api:
+    build: ./docker_email
+    container_name: docker_email
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
