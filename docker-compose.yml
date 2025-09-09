@@ -10,8 +10,8 @@ services:
       - DB_USER=admin
       - DB_PASSWORD=DBpicshot
       - DB_NAME=eventsreminder
-      - GOOGLE_GEMINI_API_KEY=yAIzaSyCjvLZnxPZ0TMB5fBADmdh4bBcQoSJEmy4
-
+      - GOOGLE_GEMINI_API_KEY=AIzaSyCjvLZnxPZ0TMB5fBADmdh4bBcQoSJEmy4 # replace with valid key
+      - EMAIL_API_URL=http://email_api:8000/sendEmail   # use internal docker network
     depends_on:
       - email_api
 
